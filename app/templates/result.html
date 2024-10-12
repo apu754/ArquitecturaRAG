@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Resultado de la consulta</h1>
+
+      <div class="result-container">
+        <!-- Pregunta y Prompt Utilizado -->
+        <div class="horizontal-row">
+          <div class="result-box-small">
+            <h2>Pregunta:</h2>
+            <p>{{ question }}</p>
+          </div>
+
+          <div class="result-box-small">
+            <h2>Prompt Utilizado:</h2>
+            <p>{{ prompt }}</p>
+          </div>
+        </div>
+
+        <!-- Nombre del documento cargado -->
+        <div class="result-box-doc">
+          <h2>Documento Cargado:</h2>
+          <p>{{ doc_name }}</p>
+        </div>
+
+        <!-- Respuesta Generada -->
+        <div class="result-box-response">
+          <h2>Respuesta Generada:</h2>
+          <p>{{ answer }}</p>
+        </div>
+
+        <!-- Tokens Usados -->
+        <div class="result-box-tokens">
+          <h2>Tokens Usados:</h2>
+          <p>{{ tokens }}</p>
+        </div>
+      </div>
+
+      <a href="{{ url_for('main.index') }}"><button>Hacer otra pregunta</button></a>
+    </div>
+  </body>
+</html>

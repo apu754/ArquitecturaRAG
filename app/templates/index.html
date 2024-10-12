@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arquitectura RAG</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sube tu archivo y haz una pregunta</h1>
+      <form method="POST" enctype="multipart/form-data">
+        <label for="file">Archivo PDF:</label>
+        <input type="file" id="file" name="file" required /><br />
+
+        <label for="question">Pregunta:</label>
+        <input type="text" id="question" name="question" required /><br />
+
+        <label for="prompt">Selecciona un prompt:</label>
+        <select id="prompt" name="prompt" required>
+          <option
+            value="Responde de manera breve con base en lo establecido en el documento proporcionado de la constitucion"
+          >
+            Responde de manera breve con base en la Constitución
+          </option>
+          <option
+            value="Por favor, proporciona una respuesta precisa y detallada con base en el documento proporcionado de la constitucion colombiana"
+          >
+            Proporciona una respuesta precisa y detallada
+          </option>
+          <option value="Responde de forma precisa y corta basándote en la Constitución">
+            Responde de forma precisa y corta
+          </option>
+          <option value="Da una respuesta directa basada en los artículos relevantes">
+            Da una respuesta directa basada en los artículos relevantes
+          </option>
+          <option
+            value="Responde solamente con el artículo de la Constitución donde se menciona el tema, sin agregar explicaciones adicionales
+    ,Si hay múltiples artículos relevantes, indícalos todos. Si no hay un artículo relevante, indica 'No se encontró un artículo específico basado en el documento que te di sobre la constitucion"
+          >
+            Responde solamente con el artículo de la Constitución
+          </option>
+        </select>
+        <br />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>

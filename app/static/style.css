@@ -1,0 +1,181 @@
+/* Estilo general */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fdf6e3; /* Fondo color crema */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  margin-top: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+/* Ajustar los inputs y select */
+input[type='file'],
+input[type='text'],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px; /* Bordes redondeados */
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Botón de envío */
+button {
+  background-color: #6d9886;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px; /* Bordes redondeados */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+/* Hover en el botón */
+button:hover {
+  background-color: #4f7766;
+}
+/* Títulos y etiquetas */
+h1 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+/* Contenedor de resultados */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilo de filas horizontales */
+.horizontal-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Estilos para la pregunta y el prompt */
+.result-box-small {
+  flex: 1;
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #6d9886;
+  text-align: left;
+}
+
+/* Estilo para la respuesta */
+
+/* Estilo para el nombre del documento */
+.result-box-doc {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #6d9886;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Estilo del botón */
+button {
+  background-color: #6d9886;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+/* Hover en el botón */
+button:hover {
+  background-color: #4f7766;
+}
+
+/* Estilo del footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Diseño responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .horizontal-row {
+    flex-direction: column;
+  }
+
+  .result-box-tokens {
+    width: 100%;
+  }
+}
+
+/* Contenedor de resultados */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* Centrar los elementos horizontalmente */
+}
+
+/* Estilo para la respuesta */
+.result-box-response {
+  flex: 1;
+  padding: 20px;
+  background-color: #fef4e6;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #e09f3e;
+  text-align: center; /* Centramos el texto */
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Estilo para los tokens usados */
+.result-box-tokens {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #9c6644;
+  text-align: center; /* Centramos el contenido */
+  font-size: 16px; /* Tamaño de fuente más grande */
+  width: 150px; /* Ancho ajustado */
+  margin: 0 auto; /* Centramos el contenedor */
+  color: #6d9886; /* Color a juego con otros elementos */
+}
